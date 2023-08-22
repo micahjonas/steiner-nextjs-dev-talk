@@ -1,0 +1,65 @@
+/*
+	CSS Variables For Theming
+	https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss
+*/
+
+@import '@fontsource/manrope';
+@import '@fontsource/jetbrains-mono';
+
+/*
+@import "@fontsource/inter/200.css";
+@import "@fontsource/inter/200-italic.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/300-italic.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/400-italic.css"; //
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--r-main-font: 'Inter';
+	--r-heading-font: 'Inter';
+	--r-code-font: 'JetBrains Mono';
+	--r-link-color: aqua;
+	--r-link-color-hover: aqua;
+}
+
+.hljs {
+	background: none;
+}
+
+.hljs-title,
+.hljs-keyword {
+	font-weight: normal;
+}
+
+.reveal pre,
+.reveal code {
+	overflow: hidden !important;
+}
+
+.reveal pre {
+	box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	text-align: left;
+}
+
+p {
+	font-weight: 200;
+	text-align: left;
+}
+
+ul {
+	font-weight: 200;
+	text-align: left;
+	font-size: 36px;
+}
