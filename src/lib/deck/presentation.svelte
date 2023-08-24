@@ -1,394 +1,300 @@
 <script lang="ts">
+	import WithRSCs from '../../assets/With_React.avif'
+	import WithoutRSCs from '../../assets/Without_React.avif'
 	import Slide from './slide.svelte'
 	import Code from './code.svelte'
+	import Inline from './inline.svelte'
 	import Markdown from './markdown.svelte'
 </script>
 
 <Slide>
-	<h1>Tailwind</h1>
+	<h1>Next.js</h1>
 </Slide>
 
 <Slide>
-	<h4 class="capitalize">Have you used tailwind before you joined Steiner?</h4>
+	<h2>THE react framework for the web</h2>
 </Slide>
 
 <Slide>
-	<h4 class="capitalize">
-		Did you think tailwind was a good approach to styling web when you first learned about it?
-	</h4>
+	<h3 class="capitalize">It's a REACT Meta-Framework</h3>
+	<p>And there are others: REMIX, Gatsby</p>
+</Slide>
+
+<Slide id="what" animate>
+	<h3 class="capitalize">What does it offer?</h3>
+	<ul />
+</Slide>
+
+<Slide id="what" animate>
+	<h3 class="capitalize">What does it offer?</h3>
+	<p>Routing, Rendering, Styling, Bundling, Optimisations, Typescript</p>
 </Slide>
 
 <Slide>
-	<h4 class="capitalize">Would you use tailwind again after using it here?</h4>
+	<h3>Routing</h3>
+	<ul>
+		<li>File based routing based on <em>pages dir</em>ectory</li>
+		<li>Routes based on folder & file names</li>
+		<li>No need to manually setup a router & maintain it</li>
+	</ul>
 </Slide>
 
 <Slide>
-	<h3>What is tailwind?</h3>
+	<h3>(Page based) rendering</h3>
+	<ul>
+		<li>Server Side Rendering</li>
+		<li>Static Site Generation</li>
+		<li>Incremental Static Generation</li>
+		<li>Client Side Rendering</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h3>Pre-Rendering (SSR, SSG)</h3>
+	<ul>
+		<li>Next generates html based on the react components</li>
+		<li>Faster till the browser can show something</li>
+		<li>Easier to crawl, SEO</li>
+		<li>Rehydration --> SPA like behavior</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h3>How?</h3>
+	<p>Export additional functions to tell next how to handle rendering & data fetching:</p>
 	<p>
-		A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90
-		that can be composed to build any design, directly in your markup.
+		<code class="inline my-2">getStaticProps</code>, <code class="inline">getStaticPaths</code>,
+		<code class="inline">>getServerSideProps</code>, etc
+	</p>
+</Slide>
+
+<Slide id="why" animate>
+	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<ul />
+</Slide>
+
+<Slide id="why" animate>
+	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<ul>
+		<li>Defaults</li>
+	</ul>
+</Slide>
+
+<Slide id="why" animate>
+	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<ul>
+		<li>Defaults</li>
+		<li>Structure</li>
+	</ul>
+</Slide>
+
+<Slide id="why" animate>
+	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<ul>
+		<li>Defaults</li>
+		<li>Structure</li>
+		<li>Rendering</li>
+	</ul>
+</Slide>
+
+<Slide id="why" animate>
+	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<ul>
+		<li>Defaults</li>
+		<li>Structure</li>
+		<li>Rendering</li>
+		<li>Documentation</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h2 class="!normal-case">RSCs</h2>
+	<h5 class="!normal-case">React Server Components</h5>
+</Slide>
+
+<Slide>
+	<h3>React Server Components (RSCs)</h3>
+	<ol>
+		<li>Fetch data & render on the server using await</li>
+		<li>Html is streamed into the client-side component tree</li>
+		<li>Interleaviung with server & client components</li>
+		<li>Rerenders on the server</li>
+	</ol>
+</Slide>
+
+<Slide>
+	<img class="h-[775x] w-[700px] !mx-auto" src={WithoutRSCs} />
+</Slide>
+
+<Slide>
+	<img class="max-h-4xl" src={WithRSCs} />
+</Slide>
+
+<Slide>
+	<h3 class="!normal-case">Advantages (RSCs)</h3>
+	<ol>
+		<li>Data fetched & rendered close to the source</li>
+		<li>No rerender on the client, extra javascript</li>
+		<li>Prevent data fetching waterfalls</li>
+		<li>Performance & bundle size</li>
+	</ol>
+</Slide>
+
+<Slide>
+	<h3 class="!normal-case">Limitations (RSCs)</h3>
+	<ol>
+		<li>Code must be serializable</li>
+		<li>No <Inline>useEffect</Inline>, <Inline>useState</Inline> etc</li>
+		<li>No interactivity</li>
+	</ol>
+</Slide>
+
+<Slide>
+	<h2 class="capitalize">How can I use it?</h2>
+</Slide>
+
+<Slide>
+	<h3 class="capitalize">Next13 App Router (App Dir)</h3>
+	<p>Next introduced a brand new architecture based on RSCs & routing changes</p>
+</Slide>
+
+<Slide animate>
+	<uL>
+		<li>New API / Architecture</li>
+	</uL>
+</Slide>
+
+<Slide animate>
+	<uL>
+		<li>New API / Architecture</li>
+		<li>Incrementally adoptable</li>
+	</uL>
+</Slide>
+
+<Slide animate>
+	<uL>
+		<li>New API / Architecture</li>
+		<li>Incrementally adoptable</li>
+		<li>There are no plans to abendon pages dir</li>
+	</uL>
+</Slide>
+
+<Slide>
+	<h3>How does it work?</h3>
+	<ul>
+		<li>Every component is a RSC by default</li>
+		<li>Add "use client" on top of a file to make a component interactive</li>
+		<li>Client components are rendered on server and on client</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h3 class="capitalize">What else is different?</h3>
+	<ul>
+		<li>Folder name defines the routes</li>
+		<li>File names define how next renders the components</li>
+		<li>
+			e.g <Inline>page.tsx</Inline>, <Inline>layout.tsx</Inline>, <Inline>loading.tsx</Inline>, <Inline
+				>error.tsx</Inline
+			> etc.
+		</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h3>Advandatges</h3>
+	<ul>
+		<li>Shared layout that retain state on navigation</li>
+		<li>Parallel routes</li>
+		<li>Intercepting routes</li>
+		<li>Collocated react components</li>
+	</ul>
+</Slide>
+
+<Slide animate>
+	<p>Create a folder called <Inline>app/</Inline> in your base directory</p>
+</Slide>
+
+<Slide animate>
+	<p>Create a folder called <Inline>app/</Inline> in your base directory</p>
+	<p>Add the files: <Inline>layout.tsx</Inline> and <Inline>page.tsx</Inline></p>
+</Slide>
+
+<Slide animate>
+	<p>Create a folder called <Inline>app/</Inline> in your base directory</p>
+	<p>Add the files: <Inline>layout.tsx</Inline> and <Inline>page.tsx</Inline></p>
+	<p>
+		Experimental flag <Inline>appDir</Inline> is no longer required as the API is considered stable
 	</p>
 </Slide>
 
 <Slide>
-	<p>
-		Now I know what you’re thinking, <span class="italic font-bold"
-			>“this is an atrocity, what a horrible mess!”</span
-		>
-		and you're right, it's kind of ugly. In fact it’s just about impossible to think this is a good idea
-		the first time you see it<br />
-	</p>
-	<p class="font-bold">— you have to actually try it.</p>
-</Slide>
-
-<Slide id="why" animate>
-	<div class="grid">
-		<h4>So why would we ever do that?</h4>
-		<ul />
-	</div>
-</Slide>
-
-<Slide id="why" animate>
-	<div class="grid">
-		<h4>So why would we ever do that?</h4>
-		<ul>
-			<li>You aren’t wasting energy inventing class names</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="why" animate>
-	<div class="grid">
-		<h4>So why would we ever do that?</h4>
-		<ul>
-			<li>You aren’t wasting energy inventing class names</li>
-			<li>Your CSS stops growing</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="why" animate>
-	<div class="grid">
-		<h4>So why would we ever do that?</h4>
-		<ul>
-			<li>You aren’t wasting energy inventing class names</li>
-			<li>Your CSS stops growing</li>
-			<li>Making changes feels safer</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="inlane" animate>
-	<div class="grid">
-		<h4>Why not just use inline styles?</h4>
-		<ul />
-	</div>
-</Slide>
-
-<Slide id="inlane" animate>
-	<div class="grid">
-		<h4>Why not just use inline styles?</h4>
-		<ul>
-			<li>Designing with constraints</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="inlane" animate>
-	<div class="grid">
-		<h4>Why not just use inline styles?</h4>
-		<ul>
-			<li>Designing with constraints</li>
-			<li>Responsive design</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="inlane" animate>
-	<div class="grid">
-		<h4>Why not just use inline styles?</h4>
-		<ul>
-			<li>Designing with constraints</li>
-			<li>Responsive design</li>
-			<li>Hover, focus, and other states</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="controversal" animate>
-	<h4>Doesn’t this mean if I want to change some design I need to adapt it in many places?</h4>
-</Slide>
-
-<Slide id="controversal" animate>
-	<h4>Doesn’t this mean if I want to change some design I need to adapt it in many places?</h4>
-	<h1>YES!</h1>
-</Slide>
-
-<Slide id="controversal" animate>
-	<h4>And that might be a good thing</h4>
-</Slide>
-
-<Slide id="my" animate>
-	<h4>My controversial opinion of the day</h4>
-</Slide>
-
-<Slide id="my" animate>
-	<h4>My controversial opinion of the day</h4>
-	<p class="italic">Copy paste might not be as evil as many make it out to be</p>
-</Slide>
-
-<Slide>
-	<p>
-		Sharing code extensively complicates its adaptability, leading to unforeseen consequences. This
-		is especially true for styles, which are difficult to test automatically in a useful manner.
-	</p>
-</Slide>
-
-<Slide id="less" animate>
-	<div class="grid">
-		<h4>Less controversal solutions</h4>
-		<ul />
-	</div>
-</Slide>
-
-<Slide id="less" animate>
-	<div class="grid">
-		<h4>Less controversal solutions</h4>
-		<ul>
-			<li class="italic">Multi-cursor editing</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="less" animate>
-	<div class="grid">
-		<h4>Less controversal solutions</h4>
-		<ul>
-			<li class="italic">Multi-cursor editing</li>
-			<li>Loops</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide id="less" animate>
-	<div class="grid">
-		<h4>Less controversal solutions</h4>
-		<ul>
-			<li class="italic">Multi-cursor editing</li>
-			<li>Loops</li>
-			<li class="font-medium">Extracting components</li>
-		</ul>
-	</div>
-</Slide>
-
-<Slide>
-	<h4>STEINER UI-Kit</h4>
-	<p class="italic">Make it as easy to create consistent UI’s</p>
-</Slide>
-
-<Slide>
-	<h4>Tips and tricks</h4>
-</Slide>
-
-<Slide animate>
-	<h4>Work within tailwinds constraints</h4>
-</Slide>
-
-<Slide animate>
-	<Code id="code">
-		{`
-			<div className="p-[16px]" />
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<div class="flex justify-center w-full">
-		<Code id="code">
-			{`
-		<div className="p-4" />
-	`}
-		</Code>
-	</div>
-</Slide>
-
-<Slide>
-	<h4>It's still html & css</h4>
-</Slide>
-
-<Slide animate>
+	<h3>layout.tsx</h3>
 	<Code id="code" lines>
 		{`	
-				<Alert
-					additionalContent="This is additional content"
-					color="info"
-					title="Info alert"
-				/>
+		export default function RootLayout({
+			children,
+		}: {
+			children: React.ReactNode
+		}) {
+			return (
+				<html lang="en">
+					<body>{children}</body>
+				</html>
+			)
+		}
 		`}
 	</Code>
 </Slide>
 
-<Slide animate>
-	<Code id="code" lines="2">
-		{`	
-				<Alert
-					className="bg-blue-200"
-					additionalContent="This is additional content"
-					color="info"
-					title="Info alert"
-				/>
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<h4>Works no worries!</h4>
-</Slide>
-
-<Slide animate>
+<Slide>
+	<h3 class="capitalize">page.tsx</h3>
 	<Code id="code" lines>
 		{`	
-				<Alert
-					className="bg-blue-200"
-					additionalContent="This is additional content"
-					color="info"
-					title="Info alert"
-				/>
+export default function Page() {
+  return <h1>Hello, Next.js!</h1>
+}
 		`}
 	</Code>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines="2">
-		{`	
-				<Alert
-					className="bg-blue-200 text-lg"
-					additionalContent="This is additional content"
-					color="info"
-					title="Info alert"
-				/>
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<h4>No change in appearnce :-(</h4>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines="2">
-		{`	
-				<Alert
-					className="text-sm bg-blue-100 bg-blue-200 text-lg"
-					additionalContent="This is additional content"
-					color="info"
-					title="Info alert"
-				/>
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines="2">
-		{`	
-				<Alert
-					className="text-lg text-sm bg-blue-100 bg-blue-200"
-					additionalContent="This is additional content"
-					color="info"
-					title="Info alert"
-				/>
-		`}
-	</Code>
-</Slide>
-
-<Slide id="designers" animate>
-	<h4>Solutions?</h4>
-</Slide>
-
-<Slide id="designers" animate>
-	<h4>Solutions?</h4>
-	<p class="italic">
-		Why change the components in the first place? Talk to UX it should be fine the use the
-		components we have!
-	</p>
 </Slide>
 
 <Slide>
-	<h4>I don't want to talk I want a real solution!</h4>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines>
-		{`	
-			twMerge('text-sm bg-blue-100 bg-blue-200 text-lg')
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines="2">
-		{`	
-			twMerge('text-sm bg-blue-100 bg-blue-200 text-lg')
-			→ 'bg-blue-200 text-lg'
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines="3">
-		{`	
-			twMerge('text-sm bg-blue-100 bg-blue-200 text-lg')
-			// → 'bg-blue-200 text-lg'
-			twMerge('px-2 py-1 bg-red hover:bg-dark-red', 'p-3 bg-[#B91C1C]')
-		`}
-	</Code>
-</Slide>
-
-<Slide animate>
-	<Code id="code" lines="4">
-		{`	
-			twMerge('text-sm bg-blue-100 bg-blue-200 text-lg')
-			// → 'bg-blue-200 text-lg'
-			twMerge('px-2 py-1 bg-red hover:bg-dark-red', 'p-3 bg-[#B91C1C]')
-			→ 'hover:bg-dark-red p-3 bg-[#B91C1C]'
-		`}
-	</Code>
-</Slide>
-
-<Slide id="caviate" animate>
-	<h4>Caveat</h4>
-</Slide>
-
-<Slide id="caviate" animate>
-	<h4>Caveat</h4>
-	<p>flowbite-react doesn't use tailwind-merge</p>
+	<h3>Cache API</h3>
 </Slide>
 
 <Slide>
-	<h4>VS Code IntelliSense (JetBrains appreantly has it too)</h4>
+	<h3>Server Actions</h3>
 </Slide>
 
 <Slide>
-	<h4>Automatic class sorting with Prettier</h4>
+	<h3 class="capitalize">Challenges*</h3>
+	<p class="text-sm">*call it problems</p>
+</Slide>
+
+<Silde>
+	<h4>The ecosystem is not ready</h4>
+</Silde>
+
+<Slide>
+	<p>Documentations, Adoption of third party libs, component libs, i18n</p>
 </Slide>
 
 <Slide>
-	<h4>I want to style ...</h4>
+	<h4 class="capitalize">Stabilty</h4>
+	<p>App router API is stable, but the story around data fetch isn't</p>
+	<p>#ServerActions</p>
 </Slide>
 
 <Slide>
-	<h4>Livecoding?</h4>
+	<h4 class="capitalize">Slow Dev Server</h4>
 </Slide>
 
 <Slide>
-	<h4>Use flexbox & grid</h4>
+	<h4 class="capitalize">Response</h4>
+	<p>Depends on number of modules (they need to be compiled multiple times)</p>
+	<p>TurboPack should help</p>
 </Slide>
 
 <Slide>
-	<h4>Appeal to everyone</h4>
-	<p>
-		If there are layouts that feel should be ready to use components or where blue prints should
-		exists to quickly get started. Please write me as I’m always happy to improve the implementation
-		of our design system.
-	</p>
+	<h3 class="capitalize">Should we even SSR?</h3>
 </Slide>
