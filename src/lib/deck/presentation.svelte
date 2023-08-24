@@ -12,45 +12,123 @@
 </Slide>
 
 <Slide>
-	<h2>THE react framework for the web</h2>
+	<h3 class="!normal-case">THE react framework for the web</h3>
 </Slide>
 
 <Slide>
-	<h3 class="capitalize">It's a REACT Meta-Framework</h3>
+	<h3 class="!normal-case">It's a React meta-framework</h3>
 	<p>And there are others: REMIX, Gatsby</p>
 </Slide>
 
 <Slide id="what" animate>
-	<h3 class="capitalize">What does it offer?</h3>
+	<h3 class="!normal-case">What does it offer?</h3>
 	<ul />
 </Slide>
 
 <Slide id="what" animate>
-	<h3 class="capitalize">What does it offer?</h3>
+	<h3 class="!normal-case">What does it offer?</h3>
 	<p>Routing, Rendering, Styling, Bundling, Optimisations, Typescript</p>
 </Slide>
 
-<Slide>
-	<h3>Routing</h3>
+<Slide id="routing" animate>
+	<h3 class="!normal-case">Routing</h3>
+	<ul />
+</Slide>
+
+<Slide id="routing" animate>
+	<h3 class="!normal-case">Routing</h3>
 	<ul>
-		<li>File based routing based on <em>pages dir</em>ectory</li>
+		<li>File based routing based on <Inline>pages dir</Inline>ectory</li>
+	</ul>
+</Slide>
+
+<Slide id="routing" animate>
+	<h3 class="!normal-case">Routing</h3>
+	<ul>
+		<li>File based routing based on <Inline>pages dir</Inline>ectory</li>
+		<li>Routes based on folder & file names</li>
+	</ul>
+</Slide>
+
+<Slide id="routing" animate>
+	<h3 class="!normal-case">Routing</h3>
+	<ul>
+		<li>File based routing based on <Inline>pages dir</Inline>ectory</li>
 		<li>Routes based on folder & file names</li>
 		<li>No need to manually setup a router & maintain it</li>
 	</ul>
 </Slide>
 
-<Slide>
-	<h3>(Page based) rendering</h3>
+<Slide id="rendering" animate>
+	<h3 class="!normal-case">(Page based) Rendering</h3>
+	<ul />
+</Slide>
+
+<Slide id="rendering" animate>
+	<h3 class="!normal-case">(Page based) Rendering</h3>
 	<ul>
-		<li>Server Side Rendering</li>
-		<li>Static Site Generation</li>
-		<li>Incremental Static Generation</li>
-		<li>Client Side Rendering</li>
+		<li>Server Side Rendering (SSR)</li>
 	</ul>
 </Slide>
 
-<Slide>
-	<h3>Pre-Rendering (SSR, SSG)</h3>
+<Slide id="rendering" animate>
+	<h3 class="!normal-case">(Page based) Rendering</h3>
+	<ul>
+		<li>Server Side Rendering (SSR)</li>
+		<li>Static Site Generation (SSG)</li>
+	</ul>
+</Slide>
+
+<Slide id="rendering" animate>
+	<h3 class="!normal-case">(Page based) Rendering</h3>
+	<ul>
+		<li>Server Side Rendering (SSR)</li>
+		<li>Static Site Generation (SSG)</li>
+		<li>Incremental Static Generation (ISR)</li>
+	</ul>
+</Slide>
+
+<Slide id="rendering" animate>
+	<h3 class="!normal-case">(Page based) Rendering</h3>
+	<ul>
+		<li>Server Side Rendering (SSR)</li>
+		<li>Static Site Generation (SSG)</li>
+		<li>Incremental Static Generation (ISR)</li>
+		<li>Client Side Rendering (CSR)</li>
+	</ul>
+</Slide>
+
+<Slide id="prerendering" animate>
+	<h3 class="!normal-case">Pre-Rendering (SSR, SSG)</h3>
+	<ul />
+</Slide>
+
+<Slide id="prerendering" animate>
+	<h3 class="!normal-case">Pre-Rendering (SSR, SSG)</h3>
+	<ul>
+		<li>Next generates html based on the react components</li>
+	</ul>
+</Slide>
+
+<Slide id="prerendering" animate>
+	<h3 class="!normal-case">Pre-Rendering (SSR, SSG)</h3>
+	<ul>
+		<li>Next generates html based on the react components</li>
+		<li>Faster till the browser can show something</li>
+	</ul>
+</Slide>
+
+<Slide id="prerendering" animate>
+	<h3 class="!normal-case">Pre-Rendering (SSR, SSG)</h3>
+	<ul>
+		<li>Next generates html based on the react components</li>
+		<li>Faster till the browser can show something</li>
+		<li>Easier to crawl, SEO</li>
+	</ul>
+</Slide>
+
+<Slide id="prerendering" animate>
+	<h3 class="!normal-case">Pre-Rendering (SSR, SSG)</h3>
 	<ul>
 		<li>Next generates html based on the react components</li>
 		<li>Faster till the browser can show something</li>
@@ -59,29 +137,43 @@
 	</ul>
 </Slide>
 
-<Slide>
-	<h3>How?</h3>
-	<p>Export additional functions to tell next how to handle rendering & data fetching:</p>
+<Slide id="how" animate>
+	<h3 class="!normal-case">How?</h3>
+</Slide>
+
+<Slide id="how" animate>
+	<h3 class="!normal-case">How?</h3>
+	<p>Export additional functions on page components to handle rendering & data fetching:</p>
 	<p>
 		<code class="inline my-2">getStaticProps</code>, <code class="inline">getStaticPaths</code>,
 		<code class="inline">>getServerSideProps</code>, etc
 	</p>
 </Slide>
 
+<Slide id="how" animate>
+	<h3 class="!normal-case">How?</h3>
+	<p>Export additional functions on page components to handle rendering & data fetching:</p>
+	<p>
+		<code class="inline my-2">getStaticProps</code>, <code class="inline">getStaticPaths</code>,
+		<code class="inline">>getServerSideProps</code>, etc
+	</p>
+	<p>Rehydrate the page on the client</p>
+</Slide>
+
 <Slide id="why" animate>
-	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<h3 class="!normal-case">Why do we used Next @Steiner?</h3>
 	<ul />
 </Slide>
 
 <Slide id="why" animate>
-	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<h3 class="!normal-case">Why do we used Next @Steiner?</h3>
 	<ul>
 		<li>Defaults</li>
 	</ul>
 </Slide>
 
 <Slide id="why" animate>
-	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<h3 class="!normal-case">Why do we used Next @Steiner?</h3>
 	<ul>
 		<li>Defaults</li>
 		<li>Structure</li>
@@ -89,7 +181,7 @@
 </Slide>
 
 <Slide id="why" animate>
-	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<h3 class="!normal-case">Why do we used Next @Steiner?</h3>
 	<ul>
 		<li>Defaults</li>
 		<li>Structure</li>
@@ -98,7 +190,7 @@
 </Slide>
 
 <Slide id="why" animate>
-	<h3 class="capitalize">Why do we used Next @Steiner?</h3>
+	<h3 class="!normal-case">Why do we used Next @Steiner?</h3>
 	<ul>
 		<li>Defaults</li>
 		<li>Structure</li>
@@ -112,8 +204,37 @@
 	<h5 class="!normal-case">React Server Components</h5>
 </Slide>
 
-<Slide>
-	<h3>React Server Components (RSCs)</h3>
+<Slide id="rsc" animate>
+	<h3 class="!normal-case">React Server Components (RSCs)</h3>
+	<ol />
+</Slide>
+
+<Slide id="rsc" animate>
+	<h3 class="!normal-case">React Server Components (RSCs)</h3>
+	<ol>
+		<li>Fetch data & render on the server using await</li>
+	</ol>
+</Slide>
+
+<Slide id="rsc" animate>
+	<h3 class="!normal-case">React Server Components (RSCs)</h3>
+	<ol>
+		<li>Fetch data & render on the server using await</li>
+		<li>Html is streamed into the client-side component tree</li>
+	</ol>
+</Slide>
+
+<Slide id="rsc" animate>
+	<h3 class="!normal-case">React Server Components (RSCs)</h3>
+	<ol>
+		<li>Fetch data & render on the server using await</li>
+		<li>Html is streamed into the client-side component tree</li>
+		<li>Interleaviung with server & client components</li>
+	</ol>
+</Slide>
+
+<Slide id="rsc" animate>
+	<h3 class="!normal-case">React Server Components (RSCs)</h3>
 	<ol>
 		<li>Fetch data & render on the server using await</li>
 		<li>Html is streamed into the client-side component tree</li>
@@ -130,14 +251,43 @@
 	<img class="max-h-4xl" src={WithRSCs} />
 </Slide>
 
-<Slide>
+<Slide id="win" animate>
 	<h3 class="!normal-case">Advantages (RSCs)</h3>
-	<ol>
+	<ul />
+</Slide>
+
+<Slide id="win" animate>
+	<h3 class="!normal-case">Advantages (RSCs)</h3>
+	<ul>
+		<li>Data fetched & rendered close to the source</li>
+	</ul>
+</Slide>
+
+<Slide id="win" animate>
+	<h3 class="!normal-case">Advantages (RSCs)</h3>
+	<ul>
+		<li>Data fetched & rendered close to the source</li>
+		<li>No rerender on the client, extra javascript</li>
+	</ul>
+</Slide>
+
+<Slide id="win" animate>
+	<h3 class="!normal-case">Advantages (RSCs)</h3>
+	<ul>
+		<li>Data fetched & rendered close to the source</li>
+		<li>No rerender on the client, extra javascript</li>
+		<li>Prevent data fetching waterfalls</li>
+	</ul>
+</Slide>
+
+<Slide id="win" animate>
+	<h3 class="!normal-case">Advantages (RSCs)</h3>
+	<ul>
 		<li>Data fetched & rendered close to the source</li>
 		<li>No rerender on the client, extra javascript</li>
 		<li>Prevent data fetching waterfalls</li>
 		<li>Performance & bundle size</li>
-	</ol>
+	</ul>
 </Slide>
 
 <Slide>
@@ -172,11 +322,11 @@
 </Slide>
 
 <Slide>
-	<h2 class="capitalize">How can I use it?</h2>
+	<h2 class="!normal-case">How can I use it?</h2>
 </Slide>
 
 <Slide>
-	<h3 class="capitalize">Next13 App Router (App Dir)</h3>
+	<h3 class="!normal-case">Next13 App Router (App Dir)</h3>
 	<p>Next introduced a brand new architecture based on RSCs & routing changes</p>
 </Slide>
 
@@ -197,12 +347,32 @@
 	<uL>
 		<li>New API / Architecture</li>
 		<li>Incrementally adoptable</li>
-		<li>There are no plans to abendon pages dir</li>
+		<li>There are no plans to abandon pages router</li>
 	</uL>
 </Slide>
 
-<Slide>
-	<h3>How does it work?</h3>
+<Slide id="doesitwork" animate>
+	<h3 class="!normal-case">How does it work?</h3>
+	<ul />
+</Slide>
+
+<Slide id="doesitwork" animate>
+	<h3 class="!normal-case">How does it work?</h3>
+	<ul>
+		<li>Every component is a RSC by default</li>
+	</ul>
+</Slide>
+
+<Slide id="doesitwork" animate>
+	<h3 class="!normal-case">How does it work?</h3>
+	<ul>
+		<li>Every component is a RSC by default</li>
+		<li>Add <Inline>"use client"</Inline> on top of a file to make a component interactive</li>
+	</ul>
+</Slide>
+
+<Slide id="doesitwork" animate>
+	<h3 class="!normal-case">How does it work?</h3>
 	<ul>
 		<li>Every component is a RSC by default</li>
 		<li>Add <Inline>"use client"</Inline> on top of a file to make a component interactive</li>
@@ -210,8 +380,28 @@
 	</ul>
 </Slide>
 
-<Slide>
-	<h3 class="capitalize">What else is different?</h3>
+<Slide id="different" animate>
+	<h3 class="!normal-case">What else is different?</h3>
+	<ul />
+</Slide>
+
+<Slide id="different" animate>
+	<h3 class="!normal-case">What else is different?</h3>
+	<ul>
+		<li>Folder name defines the routes</li>
+	</ul>
+</Slide>
+
+<Slide id="different" animate>
+	<h3 class="!normal-case">What else is different?</h3>
+	<ul>
+		<li>Folder name defines the routes</li>
+		<li>File names define how next renders the components</li>
+	</ul>
+</Slide>
+
+<Slide id="different" animate>
+	<h3 class="!normal-case">What else is different?</h3>
 	<ul>
 		<li>Folder name defines the routes</li>
 		<li>File names define how next renders the components</li>
@@ -223,13 +413,42 @@
 	</ul>
 </Slide>
 
-<Slide>
-	<h3>Advandatges</h3>
+<Slide id="adv" animate>
+	<h3 class="!normal-case">Advantages</h3>
+	<ul />
+</Slide>
+
+<Slide id="adv" animate>
+	<h3 class="!normal-case">Advantages</h3>
 	<ul>
 		<li>Shared layout that retain state on navigation</li>
-		<li>Parallel routes</li>
-		<li>Intercepting routes</li>
+	</ul>
+</Slide>
+
+<Slide id="adv" animate>
+	<h3 class="!normal-case">Advantages</h3>
+	<ul>
+		<li>Shared layout that retain state on navigation</li>
+		<li>Component based caching & streaming</li>
+	</ul>
+</Slide>
+
+<Slide id="adv" animate>
+	<h3 class="!normal-case">Advantages</h3>
+	<ul>
+		<li>Shared layout that retain state on navigation</li>
+		<li>Component based caching & streaming</li>
 		<li>Collocated react components</li>
+	</ul>
+</Slide>
+
+<Slide id="adv" animate>
+	<h3 class="!normal-case">Advantages</h3>
+	<ul>
+		<li>Shared layout that retain state on navigation</li>
+		<li>Component based caching & streaming</li>
+		<li>Collocated react components</li>
+		<li>Parallel & intercepting routes</li>
 	</ul>
 </Slide>
 
@@ -251,7 +470,7 @@
 </Slide>
 
 <Slide>
-	<h3>layout.tsx</h3>
+	<h3 class="!normal-case">layout.tsx</h3>
 	<Code id="code" lines>
 		{`	
 		export default function RootLayout({
@@ -270,7 +489,7 @@
 </Slide>
 
 <Slide>
-	<h3 class="capitalize">page.tsx</h3>
+	<h3 class="!normal-case">page.tsx</h3>
 	<Code id="code" lines>
 		{`	
 export default function Page() {
@@ -300,48 +519,52 @@ export default function Page() {
 </Slide>
 
 <Slide id="stability" animate>
-	<h3 class="capitalize">Stabilty</h3>
+	<h3 class="!normal-case">Stabilty</h3>
 	<ul />
 </Slide>
 
 <Slide id="stability" animate>
-	<h3 class="capitalize">Stabilty</h3>
+	<h3 class="!normal-case">Stabilty</h3>
 	<ul>
 		<li>App Router API is stable, but the story around data fetching is not</li>
 	</ul>
 </Slide>
 
 <Slide id="stability" animate>
-	<h3 class="capitalize">Stabilty</h3>
+	<h3 class="!normal-case">Stabilty</h3>
 	<ul>
 		<li>App Router API is stable, but the story around data fetching is not</li>
-		<li>#ServerActions</li>
+		<li class="font-medium">#ServerActions</li>
 	</ul>
 </Slide>
 
 <Slide id="stability" animate>
-	<h3 class="capitalize">Stabilty</h3>
+	<h3 class="!normal-case">Stabilty</h3>
 	<ul>
 		<li>App Router API is stable, but the story around data fetching is not</li>
-		<li>#ServerActions</li>
+		<li class="font-medium">#ServerActions</li>
 		<li>Very active development that can break things</li>
 	</ul>
 </Slide>
-<Slide id="slow">
-	<h3 class="capitalize">Slow Dev Server</h3>
+<Slide id="slow" animate>
+	<h3 class="!normal-case">Slow dev server</h3>
 </Slide>
 
-<Slide id="slow">
-	<h3 class="capitalize">Slow Dev Server</h3>
+<Slide id="slow" animate>
+	<h3 class="!normal-case">Slow dev server</h3>
 	<p>Depends on number of modules (they need to be compiled multiple times)</p>
 </Slide>
 
-<Slide id="slow">
-	<h3 class="capitalize">Slow Dev Server</h3>
+<Slide id="slow" animate>
+	<h3 class="!normal-case">Slow dev server</h3>
 	<p>Depends on number of modules (they need to be compiled multiple times)</p>
 	<p>TurboPack should help</p>
 </Slide>
 
 <Slide>
 	<h3 class="capitalize">Should we even SSR?</h3>
+</Slide>
+
+<Slide>
+	<h1 class="capitalize">Questions?</h1>
 </Slide>
