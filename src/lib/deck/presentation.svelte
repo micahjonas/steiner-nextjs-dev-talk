@@ -149,6 +149,28 @@
 	</ol>
 </Slide>
 
+<Slide
+	><h3>Really experimental*</h3>
+	<p class="text-xs">*API can still change</p></Slide
+>
+
+<Slide>
+	<h3 class="!normal-case">(unstable) Cache API</h3>
+</Slide>
+
+<Slide>
+	<h3 class="!normal-case">React Actions</h3>
+	<p>
+		Actions are an experimental feature in React, allowing you to run <Inline>async</Inline> code in
+		response to a user interaction.
+	</p>
+	<p>
+		Rather than needing to manually create an API endpoint, Server Actions automatically create an
+		endpoint for Next.js to use behind the scenes. When calling a Server Action, Next.js sends a
+		POST request to the page you're on with metadata for which action to run.
+	</p>
+</Slide>
+
 <Slide>
 	<h2 class="capitalize">How can I use it?</h2>
 </Slide>
@@ -183,7 +205,7 @@
 	<h3>How does it work?</h3>
 	<ul>
 		<li>Every component is a RSC by default</li>
-		<li>Add "use client" on top of a file to make a component interactive</li>
+		<li>Add <Inline>"use client"</Inline> on top of a file to make a component interactive</li>
 		<li>Client components are rendered on server and on client</li>
 	</ul>
 </Slide>
@@ -259,38 +281,63 @@ export default function Page() {
 </Slide>
 
 <Slide>
-	<h3>Cache API</h3>
+	<h1>DEMO</h1>
 </Slide>
 
 <Slide>
-	<h3>Server Actions</h3>
+	<h2 class="capitalize">Challenges*</h2>
+	<p class="text-xs">*call it problems</p>
 </Slide>
 
-<Slide>
-	<h3 class="capitalize">Challenges*</h3>
-	<p class="text-sm">*call it problems</p>
+<Slide id="ready" animate>
+	<h3>The ecosystem is not ready</h3>
 </Slide>
 
-<Silde>
-	<h4>The ecosystem is not ready</h4>
-</Silde>
+<Slide id="ready" animate>
+	<h3>The ecosystem is not ready</h3>
 
-<Slide>
 	<p>Documentations, Adoption of third party libs, component libs, i18n</p>
 </Slide>
 
-<Slide>
-	<h4 class="capitalize">Stabilty</h4>
-	<p>App router API is stable, but the story around data fetch isn't</p>
-	<p>#ServerActions</p>
+<Slide id="stability" animate>
+	<h3 class="capitalize">Stabilty</h3>
+	<ul />
 </Slide>
 
-<Slide>
-	<h4 class="capitalize">Slow Dev Server</h4>
+<Slide id="stability" animate>
+	<h3 class="capitalize">Stabilty</h3>
+	<ul>
+		<li>App Router API is stable, but the story around data fetching is not</li>
+	</ul>
 </Slide>
 
-<Slide>
-	<h4 class="capitalize">Response</h4>
+<Slide id="stability" animate>
+	<h3 class="capitalize">Stabilty</h3>
+	<ul>
+		<li>App Router API is stable, but the story around data fetching is not</li>
+		<li>#ServerActions</li>
+	</ul>
+</Slide>
+
+<Slide id="stability" animate>
+	<h3 class="capitalize">Stabilty</h3>
+	<ul>
+		<li>App Router API is stable, but the story around data fetching is not</li>
+		<li>#ServerActions</li>
+		<li>Very active development that can break things</li>
+	</ul>
+</Slide>
+<Slide id="slow">
+	<h3 class="capitalize">Slow Dev Server</h3>
+</Slide>
+
+<Slide id="slow">
+	<h3 class="capitalize">Slow Dev Server</h3>
+	<p>Depends on number of modules (they need to be compiled multiple times)</p>
+</Slide>
+
+<Slide id="slow">
+	<h3 class="capitalize">Slow Dev Server</h3>
 	<p>Depends on number of modules (they need to be compiled multiple times)</p>
 	<p>TurboPack should help</p>
 </Slide>
